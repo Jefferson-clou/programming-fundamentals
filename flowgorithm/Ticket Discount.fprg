@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ticket Discount"/>
+        <attribute name="authors" value="sarit"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-21 05:08:57 p.&#8239;m."/>
+        <attribute name="created" value="c2FyaXQ7SkVGRkVSU09OOzIwMjYtMTAtMjE7MDU6MDM6NTYgcC7igK9tLjsxMDg5Mw=="/>
+        <attribute name="edited" value="c2FyaXQ7SkVGRkVSU09OOzIwMjYtMTAtMjE7MDU6MDg6NTcgcC7igK9tLjsxOzExMDA3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Step 1:  Declare"/>
+            <declare name="num1, num2" type="Integer" array="False" size=""/>
+        </body>
+    </function>
+</flowgorithm>

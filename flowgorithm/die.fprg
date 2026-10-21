@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="die"/>
+        <attribute name="authors" value="sarit"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-28 02:46:35 p.&#8239;m."/>
+        <attribute name="created" value="c2FyaXQ7SkVGRkVSU09OOzIwMjYtMDktMjg7MDI6MDc6MzQgcC7igK9tLjsxMDkwNQ=="/>
+        <attribute name="edited" value="c2FyaXQ7SkVGRkVSU09OOzIwMjYtMDktMjg7MDI6NDY6MzUgcC7igK9tLjsyOzExMDE4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Roll 2 dice&#13;&#10;Step 1. Define or declare variables "/>
+            <declare name="die1, die2" type="Integer" array="False" size=""/>
+            <comment text="Step 2: Initialization"/>
+            <assign variable="Die1" expression="0"/>
+            <assign variable="Die2" expression="0"/>
+            <comment text="Step 3: Inputs (Get data)"/>
+            <assign variable="Die1" expression="Random(6)+1"/>
+            <assign variable="Die2" expression="Random(6)+1"/>
+            <comment text="Step 4: Process"/>
+            <if expression="Die1&gt;Die2">
+                <then>
+                    <output expression="&quot; The highest die is: &quot; &amp; Die1" newline="True"/>
+                    <output expression="&quot;The lowest die is:&quot; &amp; Die2" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;The lowest die is:&quot; &amp; Die1" newline="True"/>
+                    <output expression="&quot;The highest die is:&quot; &amp; Die2" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

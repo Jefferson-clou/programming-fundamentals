@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="taler"/>
+        <attribute name="authors" value="sarit"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-30 12:21:20 p.&#8239;m."/>
+        <attribute name="created" value="c2FyaXQ7SkVGRkVSU09OOzIwMjYtMDktMzA7MTA6NTc6NTUgYS7igK9tLjsxMDg5MA=="/>
+        <attribute name="edited" value="c2FyaXQ7SkVGRkVSU09OOzIwMjYtMDktMzA7MTI6MjE6MjAgcC7igK9tLjs1OzExMDAy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Step 1: Declare"/>
+            <declare name="num1, num2, add, subs, mult, div" type="Real" array="False" size=""/>
+            <declare name="opt" type="Integer" array="False" size=""/>
+            <comment text="Step 2: Initialize"/>
+            <assign variable="num1" expression="0"/>
+            <assign variable="num2" expression="0"/>
+            <assign variable="add" expression="0"/>
+            <assign variable="mult" expression="0"/>
+            <assign variable="div" expression="0"/>
+            <comment text="Step 3:  Inputs"/>
+            <assign variable="num1" expression="Random(100)+1"/>
+            <assign variable="num2" expression="Random(100)+1"/>
+            <output expression="&quot;Number 1 is :&quot; &amp; num1" newline="True"/>
+            <output expression="&quot;Number 2 is :&quot; &amp; num2" newline="True"/>
+            <output expression="&quot;Main menu&quot; &amp; ToChar (13) &amp;&#13;&#10;&quot; [1]. Addition &quot; &amp; ToChar (13) &amp;&#13;&#10;&quot; [2]. Substraction &quot; &amp; ToChar (13) &amp;&#13;&#10;&quot; [3]. Multiplication &quot; &amp; ToChar (13) &amp; &#13;&#10;&quot; [4]. Division &quot; &amp; ToChar (13) &amp;&#13;&#10;&quot; [5]. All operaations&quot; &amp; ToChar (13)" newline="True"/>
+            <output expression="&quot;press any option: &quot;" newline="True"/>
+            <input variable="opt"/>
+            <if expression="opt = 1">
+                <then>
+                    <assign variable="add" expression="num1 + num2"/>
+                    <output expression="&quot;Addition is : &quot; &amp; add" newline="True"/>
+                </then>
+                <else>
+                    <if expression="opt = 2">
+                        <then>
+                            <assign variable="subs" expression="num1 - num2"/>
+                            <output expression="&quot;substraction is : &quot; &amp; subs" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="opt = 3">
+                                <then>
+                                    <assign variable="mult" expression="num1 * num2"/>
+                                    <output expression="&quot;multiplication is :&quot; &amp; mult" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="opt = 4">
+                                        <then>
+                                            <assign variable="div" expression="num1 / num2"/>
+                                            <output expression="&quot;Division is : &quot; &amp; div" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="opt = 5">
+                                                <then>
+                                                    <assign variable="add" expression="num1 + num2"/>
+                                                    <assign variable="subs" expression="num1 - num2"/>
+                                                    <assign variable="mult" expression="num1 * num2"/>
+                                                    <assign variable="div" expression="num1/num2"/>
+                                                    <output expression="&quot;All operations is : &quot; &amp; ToChar (13) &amp;&#13;&#10;&quot;Addition&quot; &amp; add &amp; ToChar (13) &amp;&#13;&#10;&quot;Substraction&quot; &amp; subs &amp;ToChar (13) &amp;&#13;&#10;&quot;Multiplication&quot; &amp; mult &amp;ToChar (13) &amp;&#13;&#10;&quot;Division&quot; &amp; div" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Invalid opotion, try again&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
