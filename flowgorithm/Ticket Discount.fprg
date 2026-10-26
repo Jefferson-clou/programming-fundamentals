@@ -4,15 +4,31 @@
         <attribute name="name" value="Ticket Discount"/>
         <attribute name="authors" value="sarit"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2026-10-21 05:08:57 p.&#8239;m."/>
+        <attribute name="saved" value="2026-10-21 06:01:05 p.&#8239;m."/>
         <attribute name="created" value="c2FyaXQ7SkVGRkVSU09OOzIwMjYtMTAtMjE7MDU6MDM6NTYgcC7igK9tLjsxMDg5Mw=="/>
-        <attribute name="edited" value="c2FyaXQ7SkVGRkVSU09OOzIwMjYtMTAtMjE7MDU6MDg6NTcgcC7igK9tLjsxOzExMDA3"/>
+        <attribute name="edited" value="c2FyaXQ7SkVGRkVSU09OOzIwMjYtMTAtMjE7MDY6MDE6MDUgcC7igK9tLjsyOzEwOTk1"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <comment text="Step 1:  Declare"/>
-            <declare name="num1, num2" type="Integer" array="False" size=""/>
+            <comment text="Step 1: Variables"/>
+            <declare name="compra, total" type="Real" array="False" size=""/>
+            <comment text="Step 2: Asignacion"/>
+            <assign variable="compra" expression="0"/>
+            <assign variable="total" expression="0"/>
+            <comment text="Step 3: Entradas"/>
+            <output expression="&quot;Ingrese el valor de su compra: &quot;" newline="True"/>
+            <input variable="Compra"/>
+            <if expression="compra &gt; 100">
+                <then>
+                    <assign variable="total" expression="compra - (compra * 0.15)"/>
+                </then>
+                <else>
+                    <assign variable="total" expression="compra"/>
+                </else>
+            </if>
+            <comment text="Step 4: Salida"/>
+            <output expression="&quot;El total a pagar es: &quot; &amp; total" newline="True"/>
         </body>
     </function>
 </flowgorithm>
