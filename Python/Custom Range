@@ -1,0 +1,4 @@
+inicio = int (input("Escribe el numero inferior: "))
+fin = 13
+for n in range (inicio, fin + 1):
+  print(n)
