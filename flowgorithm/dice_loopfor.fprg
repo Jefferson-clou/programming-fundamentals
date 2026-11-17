@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="functions learning"/>
+        <attribute name="authors" value="sarit"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-11-12 11:52:03 p.&#8239;m."/>
+        <attribute name="created" value="c2FyaXQ7SkVGRkVSU09OOzIwMjYtMTEtMTE7MTA6NTQ6MTUgYS7igK9tLjsxMDg3NQ=="/>
+        <attribute name="edited" value="c2FyaXQ7SkVGRkVSU09OOzIwMjYtMTEtMTI7MTE6MzQ6NDIgcC7igK9tLjs2O3Nhcml0O0pFRkZFUlNPTjsyMDI2LTEwLTI2OzAyOjM1OjA3IHAu4oCvbS47TG9vcDEuZnByZzsyMjk1Mw=="/>
+        <attribute name="edited" value="c2FyaXQ7SkVGRkVSU09OOzIwMjYtMTEtMTI7MTE6NTI6MDMgcC7igK9tLjs0OzEwOTk4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="d1, d2, lives, totalroll, i, par, impar, igual" type="Integer" array="False" size=""/>
+            <assign variable="lives" expression="5"/>
+            <assign variable="igual" expression="0"/>
+            <assign variable="impar" expression="0"/>
+            <assign variable="par" expression="0"/>
+            <declare name="key, playername" type="String" array="False" size=""/>
+            <output expression="&quot;Enter player name&quot;" newline="True"/>
+            <input variable="playername"/>
+            <output expression="&quot;How many times would you like to roll die&quot;" newline="True"/>
+            <input variable="totalroll"/>
+            <for variable="i" start="1" end="totalroll" direction="inc" step="1">
+                <output expression="&quot;Press any key to rol die ::::&quot;" newline="True"/>
+                <input variable="key"/>
+                <output expression="&quot;Roll number &quot; &amp; i &amp; &quot;:&quot;" newline="True"/>
+                <output expression="&quot;Die 1 : &quot; &amp; rollDie1()" newline="True"/>
+                <output expression="&quot;Die 2 : &quot; &amp; rollDie2()" newline="True"/>
+                <if expression="lives &gt; 0">
+                    <then>
+                        <output expression="&quot;Tirada i: &quot; &amp; i" newline="True"/>
+                        <assign variable="d1" expression="rollDie1()"/>
+                        <assign variable="d2" expression="rollDie2()"/>
+                        <output expression="&quot;mostrar d1 : &quot; &amp; d1" newline="True"/>
+                        <output expression="&quot;mostrar d2 : &quot; &amp; d2" newline="True"/>
+                        <if expression="d1=d2">
+                            <then>
+                                <assign variable="igual" expression="igual + 1"/>
+                                <if expression="lives &lt; 5">
+                                    <then>
+                                        <assign variable="lives" expression="lives + 1"/>
+                                    </then>
+                                    <else>
+                                        <assign variable="lives" expression="lives - 1"/>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <assign variable="lives" expression="lives - 1"/>
+                            </else>
+                        </if>
+                        <if expression="d1 + d2 = par">
+                            <then>
+                                <assign variable="impar" expression="impar + 1"/>
+                            </then>
+                            <else>
+                                <assign variable="par" expression="par + 1"/>
+                            </else>
+                        </if>
+                        <if expression="lives = 0">
+                            <then>
+                                <output expression="&quot;LOSE&quot;" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+    <function name="rollDie1" type="Integer" variable="die1">
+        <parameters/>
+        <body>
+            <declare name="die1" type="Integer" array="False" size=""/>
+            <assign variable="die1" expression="Random(6) + 1"/>
+        </body>
+    </function>
+    <function name="rollDie2" type="Integer" variable="die2">
+        <parameters/>
+        <body>
+            <declare name="die2" type="Integer" array="False" size=""/>
+            <assign variable="die2" expression="Random(6) + 1"/>
+        </body>
+    </function>
+</flowgorithm>
