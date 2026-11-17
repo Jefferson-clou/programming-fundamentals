@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Multiplication Table (1 to 10)"/>
+        <attribute name="authors" value="sarit"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-11-17 01:09:46 a.&#8239;m."/>
+        <attribute name="created" value="c2FyaXQ7SkVGRkVSU09OOzIwMjYtMTEtMTc7MTI6NTM6NDIgYS7igK9tLjsxMDg4Mg=="/>
+        <attribute name="edited" value="c2FyaXQ7SkVGRkVSU09OOzIwMjYtMTEtMTc7MDE6MDk6NDYgYS7igK9tLjsxOzEwOTkz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="inicio, i, total" type="Integer" array="False" size=""/>
+            <output expression="&quot;Escribe la tabla de multiplicacion: &quot;" newline="True"/>
+            <input variable="inicio"/>
+            <for variable="i" start="1" end="10" direction="inc" step="1">
+                <assign variable="total" expression="i * inicio"/>
+                <output expression="inicio &amp; &quot;x&quot; &amp; i &amp; &quot;=&quot; &amp; total" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
