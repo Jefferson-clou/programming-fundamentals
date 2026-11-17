@@ -1,0 +1,5 @@
+inicio = int (input("Escribe la tabala de multiplicacion: "))
+
+for i in range ( 1, 11,):
+  total = i * inicio
+  print(inicio, "x", i, "=", total)
