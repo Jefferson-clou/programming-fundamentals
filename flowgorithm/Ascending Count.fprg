@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ascending Count"/>
+        <attribute name="authors" value="sarit"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-11-16 11:04:20 p.&#8239;m."/>
+        <attribute name="created" value="c2FyaXQ7SkVGRkVSU09OOzIwMjYtMTEtMTY7MTA6Mzk6MDQgcC7igK9tLjsxMDg5Ng=="/>
+        <attribute name="edited" value="c2FyaXQ7SkVGRkVSU09OOzIwMjYtMTEtMTY7MTE6MDQ6MjAgcC7igK9tLjsxOzEwOTk1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="50" direction="inc" step="1">
+                <output expression="i" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
