@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Multiplication Table With Custom Series"/>
+        <attribute name="authors" value="sarit"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-11-17 01:38:10 a.&#8239;m."/>
+        <attribute name="created" value="c2FyaXQ7SkVGRkVSU09OOzIwMjYtMTEtMTc7MDE6MzA6NTYgYS7igK9tLjsxMDg4MA=="/>
+        <attribute name="edited" value="c2FyaXQ7SkVGRkVSU09OOzIwMjYtMTEtMTc7MDE6Mzg6MTAgYS7igK9tLjsxOzEwOTg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tabla, inicio, i, total, fin" type="Integer" array="False" size=""/>
+            <output expression="&quot;Escribe la tabla de la multiplicacion : &quot;" newline="True"/>
+            <input variable="tabla"/>
+            <output expression="&quot;Escribe el numero inferior : &quot;" newline="True"/>
+            <input variable="inicio"/>
+            <assign variable="Fin" expression="8"/>
+            <for variable="i" start="4" end="8" direction="inc" step="1">
+                <assign variable="total" expression="i * tabla"/>
+                <output expression="tabla &amp; &quot;x&quot; &amp; i &amp; &quot;=&quot; &amp; total" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
