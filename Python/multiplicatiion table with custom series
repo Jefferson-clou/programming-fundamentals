@@ -1,0 +1,7 @@
+tabla = int (input("Escribe la tabala de multiplicacion : "))
+inicio = int (input("Escribe el numero inferior : "))
+fin = 8
+
+for i in range (inicio, fin + 1):
+    total = i * tabla
+    print(tabla, "x", i, "=", total)
