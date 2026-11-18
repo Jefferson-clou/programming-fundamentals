@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Tables 1 to 10 with Custom Series"/>
+        <attribute name="authors" value="sarit"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-11-17 07:13:49 p.&#8239;m."/>
+        <attribute name="created" value="c2FyaXQ7SkVGRkVSU09OOzIwMjYtMTEtMTc7MDY6NTk6NDUgcC7igK9tLjsxMDkwOQ=="/>
+        <attribute name="edited" value="c2FyaXQ7SkVGRkVSU09OOzIwMjYtMTEtMTc7MDc6MTM6NDkgcC7igK9tLjsxOzExMDEy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="inicio, fin, tabla, i, total" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduzca el numero inferior : &quot;" newline="True"/>
+            <input variable="Inicio"/>
+            <output expression="&quot;Introduzca el numero superior : &quot;" newline="True"/>
+            <input variable="Fin"/>
+            <for variable="tabla" start="1" end="10" direction="inc" step="1">
+                <output expression="&quot;&quot;" newline="True"/>
+                <output expression="&quot;___ Tabla de &quot; &amp; tabla &amp; &quot;____&quot;" newline="True"/>
+                <for variable="i" start="inicio" end="fin" direction="inc" step="1">
+                    <assign variable="total" expression="tabla * i"/>
+                    <output expression="tabla &amp; &quot;x&quot; &amp; i &amp; &quot;=&quot; &amp; total" newline="True"/>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
